@@ -115,7 +115,7 @@ async def make_embed(incident: discord.Message, outcome: Signal, actioned_by: di
     embed.set_footer(text=footer, icon_url=actioned_by.display_avatar.url)
 
     if incident.attachments:
-        attachment = incident.attachments[0]  # User-sent messages can only contain one attachment
+        attachment = incident.attachments[0]  # User-sent messages can only contain one attachment??
         file = await download_file(attachment)
 
         if file is not None:
